@@ -1,0 +1,11 @@
+forecaster-api:
+  client:
+    base-uri: "http://localhost:8080/api"
+    subpath: ""
+    connect-timeout: 3000
+    connection-request-timeout: 3000
+    socket-timeout: 2000
+    log-level: FULL
+
+server:
+  port: 8081
