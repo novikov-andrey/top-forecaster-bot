@@ -1,6 +1,6 @@
 package com.telegram.forecasterbot.client
 
-import com.telegram.forecasterbot.client.model.User
+import com.telegram.forecasterbot.model.User
 import feign.Headers
 import feign.RequestLine
 import org.springframework.http.HttpHeaders

@@ -1,4 +1,4 @@
-package com.telegram.forecasterbot.client.model
+package com.telegram.forecasterbot.model
 
 data class User (
         var telegramId: Long,

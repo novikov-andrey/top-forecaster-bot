@@ -1,6 +1,6 @@
 package com.telegram.forecasterbot.client
 
-import com.telegram.forecasterbot.client.model.User
+import com.telegram.forecasterbot.model.User
 import mu.KLogging
 import org.springframework.stereotype.Component
 
@@ -13,6 +13,11 @@ class ForecasterClient(
     companion object: KLogging()
 
     fun register(user: User) {
-        forecasterClientApi.register(user)
+        try {
+            forecasterClientApi.register(user)
+        } catch (e: Exception) {
+            logger.error(e) { "Fail to register user with id = ${user.telegramId}" }
+            throw e
+        }
     }
 }
